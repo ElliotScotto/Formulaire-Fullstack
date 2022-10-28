@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .getElementById("contactForm")
     .addEventListener("submit", async (event) => {
       event.preventDefault();
+      console.log("Test");
       const data = {
         firstname: document.getElementById("firstname").value,
         lastname: document.getElementById("lastname").value,

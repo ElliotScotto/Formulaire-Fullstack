@@ -1,10 +1,11 @@
+require("dotenv").config();
+
 const express = require("express");
 const cors = require("cors");
 const API_KEY = process.env.MAILGUN_API_KEY;
 const DOMAIN = process.env.DOMAIN;
 const formData = require("form-data");
 const Mailgun = require("mailgun.js");
-require("dotenv").config();
 
 const app = express();
 app.use(express.json());
@@ -16,11 +17,13 @@ const client = mailgun.client({
   username: "Elliot Scotto",
   key: process.env.MAILGUN_API_KEY,
 });
+console.log(API_KEY);
 //
 //
 //On crée des routes pour répondre aux requêtes envoyées par le formulaire
 app.post("/send-email", async (req, res) => {
   try {
+    console.log("Test");
     const messageData = {
       from: `${req.body.firstname} ${req.body.lastname} <${req.body.email}>`,
       to: "elliot2089@gmail.com",
