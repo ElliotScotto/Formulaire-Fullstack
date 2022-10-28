@@ -1,0 +1,28 @@
+body {
+  background-color: #7359dc;
+}
+.containercontactform {
+  padding-top: 30px;
+  background-color: #e5e5e5;
+  text-align: center;
+  width: 600px;
+  min-height: 700px;
+  padding-bottom: 30px;
+  margin: auto;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+#contactForm input,
+#contactForm button {
+  width: 300px;
+}
+.containercontactform button {
+  color: white;
+  background-color: #7359dc;
+  border-radius: 5px;
+  padding: 10px;
+}
